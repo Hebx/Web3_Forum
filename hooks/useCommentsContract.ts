@@ -1,5 +1,5 @@
 import * as wagmi from 'wagmi';
-import {useProvider, useSigner} from 'wagmi';
+import { useProvider, useSigner } from 'wagmi';
 import type { BigNumber  } from 'ethers';
 import CommentsContract from '../artifacts/contracts/Comments.sol/Comments.json';
 
@@ -25,7 +25,7 @@ export interface Comment {
 	  // We also pass in the signer if there is a signed in wallet, or if there's
   	// no signed in wallet then we'll pass in the connected provider.
 	const contract = wagmi.useContract({
-		addressOrName: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+		addressOrName: `${process.env.NEXT_PUBLIC_COMMENTS_CONTRACT}`,
 		contractInterface: CommentsContract.abi,
 		signerOrProvider: signer.data || provider,
 	});

@@ -12,12 +12,14 @@ contract Comments {
        string message;
        uint256 created_at;
    }
-//    Notify user that a comment was added
-    event commentAdded(Comment comment);
 
 uint32 private idCounter;
 // Datastructure to store our comments
 mapping(string => Comment[]) private commentsByTopic;
+
+//    Notify user that a comment was added
+    event CommentAdded(Comment comment);
+
 
 //  Fetch a list of comments of a topic
 function getComments(string calldata topic) public view returns(Comment[] memory) {
@@ -34,6 +36,6 @@ function addComment(string calldata topic, string calldata message) public {
     });
     commentsByTopic[topic].push(comment);
     idCounter++;
-    emit commentAdded(comment);
+    emit CommentAdded(comment);
 }
 }
