@@ -1,15 +1,3 @@
-# Basic Sample Hardhat Project
+# Web3 Notebook on Polygon
+![image](https://user-images.githubusercontent.com/33012322/156923660-7358a18f-dd00-4e28-b11b-ac8783a6bfee.png)
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
